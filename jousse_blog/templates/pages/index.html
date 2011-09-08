@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block slogan %}
+    <div class="green-horizontal-rule"></div>
+    <!-- Slogan Start -->
+    <div id="slogan">
+        <span class="slogan-large">I</span>l semble que la <span class="green">perfection</span> soit atteinte, non quand il n'y a plus rien à ajouter, mais quand il n'y a <span class="green">plus rien à retrancher</span> -- Antoine de Saint Exupéry</div>
+    <!-- Slogan End -->
+    <div class="green-horizontal-rule"></div>
+{% endblock %}
+
+{% block body %}
+<div class="full-width">
+    <div class="one-third">
+        <h1>Pourquoi ?</h1>
+        <p>Est-ce que <strong class="green">"pourquoi pas"</strong> pourrait être une bonne réponse ? C'était en tout cas la motivation première pour ce site.</p>
+        <p>La seconde étant ma passion pour le <strong>partage</strong> avec les autres. Je serais heureux si quelque chose sur ce site pouvait vous être <strong>utile</strong>.
+        <p>N'hésitez pas à me <%= link_to "contacter", contact_path %> pour n'importe quelle question, je vous répondrai avec plaisir.</p>
+    </div>
+
+    <div class="two-third-last">
+        <h1>Comment ?</h1>
+        <p>Tout d'abord si vous souhaitez télécharger des articles au sujet de la <strong>reconnaissance automatique de la parole ou des locuteurs</strong>, vous pouvez le faire dans la section <%= link_to "Recherche", research_path %>. Vous y trouverez mes <strong>publications et ma thèse</strong> sur le sujet.</p>
+        <p>Ensuite si vous cherchez des choses au sujet de <strong class="green">Symfony</strong>, des méthodes <strong class="green">Agiles</strong> ou des <strong class="green">technologies web</strong> en général ou  vous devriez trouver votre bonheur dans la rubrique <%= link_to "Blog", posts_path %> (français/anglais).
+        <p>Pour finir, si vous avez atterri ici en vous demandant ce que je pourrais vous apporter en travaillant pour <a href="http://www.knplabs.com">KnpLabs</a>, vous devriez jeter un ¿il à mon <%= link_to "CV", cv_path %>.</p>
+    </div>
+</div>
+{% endblock %}

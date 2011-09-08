@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vincent Jousse | Homepage</title>
+
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=8" />
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold' rel='stylesheet' type='text/css'>
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='stylesheets/build.css') }}">
+  <script type=text/javascript src="{{ url_for('static', filename='javascripts/jquery.js') }}"></script>
+  <script type=text/javascript src="{{ url_for('static', filename='javascripts/cufon-yui.js') }}"></script>
+  <script type=text/javascript src="{{ url_for('static', filename='javascripts/cufon.fonts.js') }}"></script>
+  <script type=text/javascript src="{{ url_for('static', filename='javascripts/scripts.js') }}"></script>
+</head>
+<body>
+
+
+    <!-- Page Wrapper Start -->
+    <div id="page-wrapper">
+
+
+        <!-- Logo Start -->
+        <div id="logo">
+            <div class="default-logo"><a href="/" class="default-logo"></a></div>
+        </div>
+        <!-- Logo End -->
+
+        <!-- Navigation Start -->
+        <div id="nav-wrapper">
+            <ul class="nav"><li class="current" id="home"><a href="/" class="current">Accueil</a></li><li id="blog"><a href="/blog">Blog</a></li><li id="research"><a href="/research">Recherche</a></li><li id="cv"><a href="/cv">CV</a></li><li id="contact"><a href="/contact">Contact</a></li></ul>
+        </div>
+        <!-- Navigation End -->
+        
+        <div class="horizontal-rule"></div>
+        
+        {% block slogan %}{% endblock %}
+
+        <!-- Content Start -->
+        {% block body %}{% endblock %}
+        <!-- Content End -->        
+        
+        <div class="horizontal-rule"></div>
+        
+        <!-- Footer Start -->
+        <div id="footer-wrapper">
+            <ul class="nav"><li class="current" id="home"><a href="/" class="current">Accueil</a></li><li id="blog"><a href="/blog">Blog</a></li><li id="research"><a href="/research">Recherche</a></li><li id="cv"><a href="/cv">CV</a></li><li id="contact"><a href="/contact">Contact</a></li></ul>
+            <div id="footer-logo"></div>
+            <div id="footer-copyright">License: <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">Creative Commons by-nc-sa</a></div>
+        </div>
+        <!-- Footer End -->
+
+    </div>
+    <!-- Page Wrapper End -->
+
+
+
+
+<script type="text/javascript"> Cufon.now(); </script>    
+
+</body>
+</html>
