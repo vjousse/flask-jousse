@@ -20,7 +20,7 @@
 
     <div class="two-third-last">
         <h1>Comment ?</h1>
-        <p>Tout d'abord si vous souhaitez télécharger des articles au sujet de la <strong>reconnaissance automatique de la parole ou des locuteurs</strong>, vous pouvez le faire dans la section <%= link_to "Recherche", research_path %>. Vous y trouverez mes <strong>publications et ma thèse</strong> sur le sujet.</p>
+        <p>Tout d'abord si vous souhaitez télécharger des articles au sujet de la <strong>reconnaissance automatique de la parole ou des locuteurs</strong>, vous pouvez le faire dans la section <a href="{{ url_for('.show', page='research') }}">Recherche</a>. Vous y trouverez mes <strong>publications et ma thèse</strong> sur le sujet.</p>
         <p>Ensuite si vous cherchez des choses au sujet de <strong class="green">Symfony</strong>, des méthodes <strong class="green">Agiles</strong> ou des <strong class="green">technologies web</strong> en général ou  vous devriez trouver votre bonheur dans la rubrique <%= link_to "Blog", posts_path %> (français/anglais).
         <p>Pour finir, si vous avez atterri ici en vous demandant ce que je pourrais vous apporter en travaillant pour <a href="http://www.knplabs.com">KnpLabs</a>, vous devriez jeter un ¿il à mon <%= link_to "CV", cv_path %>.</p>
     </div>
