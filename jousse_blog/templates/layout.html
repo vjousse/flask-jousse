@@ -3,18 +3,12 @@
 <html>
 <head>
   <title>Vincent Jousse | Homepage</title>
-
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=8" />
   <link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold' rel='stylesheet' type='text/css'>
-  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='stylesheets/build.css') }}">
-  <script type=text/javascript src="{{ url_for('static', filename='javascripts/jquery.js') }}"></script>
-  <script type=text/javascript src="{{ url_for('static', filename='javascripts/cufon-yui.js') }}"></script>
-  <script type=text/javascript src="{{ url_for('static', filename='javascripts/cufon.fonts.js') }}"></script>
-  <script type=text/javascript src="{{ url_for('static', filename='javascripts/scripts.js') }}"></script>
+  {% assets "css_all" %}<link rel=stylesheet type=text/css href="{{ ASSET_URL }}">{% endassets %}
 </head>
 <body>
-
 
     <!-- Page Wrapper Start -->
     <div id="page-wrapper">
@@ -55,6 +49,11 @@
 
 
 
+
+
+{% assets "js_all" %}
+<script type="text/javascript" src="{{ ASSET_URL }}"></script>
+{% endassets %}
 
 <script type="text/javascript"> Cufon.now(); </script>    
 

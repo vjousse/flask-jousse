@@ -1,4 +1,5 @@
 from flask import Flask, session, g, render_template
+from flaskext.assets import Environment, Bundle
 from jousse_blog.views import general
 
 import websiteconfig as config
@@ -6,6 +7,20 @@ import websiteconfig as config
 app = Flask(__name__)
 app.debug = config.DEBUG
 app.secret_key = config.SECRET_KEY
+
+assets = Environment(app)
+
+js = Bundle('javascripts/jquery.js', 'javascripts/cufon-yui.js',
+            'javascripts/cufon.fonts.js',
+            'javascripts/scripts.js',
+            filters='jsmin', output='javascripts/packed.js')
+
+
+css = Bundle('stylesheets/build.css',
+            filters='cssmin', output='stylesheets/packed.css')
+
+assets.register('js_all', js)
+assets.register('css_all', css)
 
 @app.errorhandler(404)
 def not_found(error):

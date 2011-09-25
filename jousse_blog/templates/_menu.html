@@ -3,8 +3,6 @@
  class="current"
 {% endif %}
 {%- endmacro %}
-
-
 {% macro display() -%} 
 <ul class="nav"><li id="home" {{ current(url_for('.show', page='index')) }}><a href="{{ url_for('.show', page='index') }}">Accueil</a></li><li id="blog" {{ current(url_for('.show', page='blog')) }}><a href="{{ url_for('.show', page='blog') }}">Blog</a></li><li id="research" {{ current(url_for('.show', page='research')) }}><a href="{{ url_for('.show', page='research') }}">Recherche</a></li><li id="cv" {{ current(url_for('.show', page='cv')) }}><a href="{{ url_for('.show', page='cv') }}" >CV</a></li><li id="contact" {{ current(url_for('.show', page='contact')) }}><a href="{{ url_for('.show', page='contact') }}">Contact</a></li></ul>
 {%- endmacro %}
