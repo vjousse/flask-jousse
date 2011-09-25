@@ -1,3 +1,4 @@
+{% import '_menu.html' as menu with context %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,13 +22,13 @@
 
         <!-- Logo Start -->
         <div id="logo">
-            <div class="default-logo"><a href="/" class="default-logo"></a></div>
+          <div class="default-logo"><a href="{{ url_for('.show', page='index') }}" class="default-logo"></a></div>
         </div>
         <!-- Logo End -->
 
         <!-- Navigation Start -->
         <div id="nav-wrapper">
-            <ul class="nav"><li id="home"><a href="/">Accueil</a></li><li id="blog"><a href="/blog">Blog</a></li><li id="research"><a href="/research">Recherche</a></li><li id="cv"><a href="/cv">CV</a></li><li id="contact"><a href="/contact">Contact</a></li></ul>
+          {{ menu.display() }}
         </div>
         <!-- Navigation End -->
         
@@ -43,7 +44,7 @@
         
         <!-- Footer Start -->
         <div id="footer-wrapper">
-            <ul class="nav"><li id="home"><a href="/">Accueil</a></li><li id="blog"><a href="/blog">Blog</a></li><li id="research"><a href="/research">Recherche</a></li><li id="cv"><a href="/cv">CV</a></li><li id="contact"><a href="/contact">Contact</a></li></ul>
+            {{ menu.display() }}
             <div id="footer-logo"></div>
             <div id="footer-copyright">License: <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">Creative Commons by-nc-sa</a></div>
         </div>
