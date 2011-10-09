@@ -3,3 +3,4 @@
 env/
 rsync_exclude.txt
 websiteconfig.py
+packed.*
