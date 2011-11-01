@@ -7,4 +7,7 @@ DEBUG = False
 SECRET_KEY = 'mysecretkey'
 DATABASE_CONNECT_OPTIONS = {}
 
+USERNAME = 'test'
+PASSWORD = 'test'
+
 del os
