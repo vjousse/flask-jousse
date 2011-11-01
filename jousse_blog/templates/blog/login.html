@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="full-width">
+    <h1>Login</h1>
+    <p>Use the below form to login to the blog admin.</p>
+    <div class="thirty-margin-filler"></div>
+    {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+    <fieldset>
+        <form action="{{ url_for('blog.login') }}" method=post>
+            <p>
+            <label for="username">Username:</label><br />
+            <input type=text id="username" name=username>
+            </p>
+            <p>
+            <label for="password">Password:</label><br />
+            <input type=password id="password" name=password>
+            </p>
+            <p>
+            <input class="small button" type="submit" value="Login">
+            </p>
+        </form>
+    </fieldset>
+</div>
+{% endblock %}

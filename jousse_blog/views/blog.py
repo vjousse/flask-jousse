@@ -10,3 +10,11 @@ def index():
         return render_template('blog/index.html')
     except TemplateNotFound:
         abort(404)
+ 
+
+@mod.route('/login', methods=['GET', 'POST'])
+def login():
+    try:
+        return render_template('blog/login.html')
+    except TemplateNotFound:
+        abort(404)
