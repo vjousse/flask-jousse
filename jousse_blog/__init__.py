@@ -1,6 +1,6 @@
 from flask import Flask, session, g, render_template
 from flaskext.assets import Environment, Bundle
-from jousse_blog.views import general
+from jousse_blog.views import general, blog
 
 import websiteconfig as config
 import os, sys
@@ -30,3 +30,4 @@ def not_found(error):
 
 
 app.register_blueprint(general.mod)
+app.register_blueprint(blog.mod, url_prefix='/blog')
