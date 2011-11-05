@@ -1,6 +1,6 @@
 from flask import Flask, session, g, render_template
 from flaskext.assets import Environment, Bundle
-from jousse_blog.views import general, blog
+from flaskext.sqlalchemy import SQLAlchemy
 
 import websiteconfig as config
 import os, sys
@@ -8,6 +8,10 @@ import os, sys
 app = Flask(__name__)
 app.debug = config.DEBUG
 app.secret_key = config.SECRET_KEY
+
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
+db = SQLAlchemy(app)
 
 assets = Environment(app)
 assets.directory = os.path.join(os.path.abspath(os.path.dirname(__file__)),'.','static')
@@ -28,6 +32,8 @@ assets.register('css_all', css)
 def not_found(error):
     return render_template('404.html'), 404
 
+
+from jousse_blog.views import general, blog
 
 app.register_blueprint(general.mod)
 app.register_blueprint(blog.mod, url_prefix='/blog')

@@ -3,6 +3,8 @@ from flask import Blueprint, render_template, abort, request, \
 from jinja2 import TemplateNotFound
 import websiteconfig as config
 
+from jousse_blog import model
+
 mod = Blueprint('blog', __name__)
 
 
