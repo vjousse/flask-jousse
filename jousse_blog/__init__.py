@@ -10,7 +10,7 @@ app.debug = config.DEBUG
 app.secret_key = config.SECRET_KEY
 
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://' + config.MYSQL_USERNAME + ':' + config.MYSQL_USERNAME + '@localhost/' + config.MYSQL_DB
 db = SQLAlchemy(app)
 
 assets = Environment(app)
