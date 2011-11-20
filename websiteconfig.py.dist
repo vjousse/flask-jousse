@@ -10,4 +10,8 @@ DATABASE_CONNECT_OPTIONS = {}
 USERNAME = 'test'
 PASSWORD = 'test'
 
+MYSQL_USERNAME = 'root'
+MYSQL_PASSWORD = 'root'
+MYSQL_DB = 'blog_flask'
+
 del os
