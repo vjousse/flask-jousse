@@ -2,3 +2,4 @@ env/
 *.pyc
 packed.*
 websiteconfig.py
+*-cache/
