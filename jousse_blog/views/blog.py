@@ -3,7 +3,7 @@ from flask import Blueprint, render_template, abort, request, \
 from jinja2 import TemplateNotFound
 import websiteconfig as config
 
-from jousse_blog import model
+from jousse_blog.model import Post
 
 mod = Blueprint('blog', __name__)
 
@@ -41,7 +41,8 @@ def logout():
 
 @mod.route('/admin')
 def admin():
-    if(session['logged_in']):
+    if('logged_in' in session and session['logged_in']):
+        posts = Post.query.all()
         return render_template('blog/admin.html')
     else:
-        abort(401)
+        return redirect(url_for('.login'))
